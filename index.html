@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portal de apoyo psicológico sobre ansiedad, depresión, autoestima y más temas de salud mental"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="estilo.css" />
+    <title>Bienestar - Apoyo emocional y salud mental</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Encabezado MENU -->
+      <header>
+        <div class="container-logo">
+          <i class="fas fa-brain"></i>
+          <h1>Bienestar Adolescente</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#temas">Temas</a></li>
+            <li><a href="#">Equipo Orientacion</a></li>
+            <li><a href="#lineas-ayuda">Emergencias</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <button class="nav-toggle" id="nav-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </header>
+      <section class="heroprin">
+        <!--HERO PRIMERO-->
+        <div class="hero-content">
+          <h1 class="hero-title">Tu bienestar mental es nuestra prioridad</h1>
+          <p class="hero-subtitle">
+            En este espacio, vas a acceder a recursos sobre cómo
+            <a>cuidarte emocionalmente</a>, mejorar tu bienestar, y
+            <a>entender lo que estás viviendo</a>.
+            <br />
+            Desde información básica hasta temas más específicos, todo en un
+            solo lugar. También podés encontrar <a>centros de salud</a> y
+            <a>líneas de apoyo</a> cercanas.
+          </p>
+          <div class="hero-cta">
+            <a href="#temas" class="btn btn-secondary">Aprender más</a>
+            <a href="#lineas-ayuda" class="btn btn-secondary"
+              >¿Necesitas hablar?</a
+            >
+          </div>
+        </div>
+        <div class="foto">
+          <img src="./img/fotoheros.jpg" alt="" />
+        </div>
+      </section>
+
+      <!-- INFORMACIÓN PRINCIPAL -->
+      <div class="informacion">
+        <div class="fila">
+          <!-- columna izquierda -->
+          <div class="col">
+            <h2 id="nombre">Apoyo para tu bienestar emocional</h2>
+            <p id="descripcion">
+              Ofrecemos información confiable y recursos para ayudarte a
+              entender y manejar diferentes aspectos de tu salud mental, desde
+              ansiedad y depresión hasta problemas de autoestima y relaciones
+              interpersonales.
+            </p>
+          </div>
+
+          <!-- Columna Central -->
+          <div class="col">
+            <img
+              src="./img/Capturailustracionprinci.PNG"
+              alt="Bienestar Adolescente"
+            />
+          </div>
+
+          <!-- Columna derecha -->
+          <div class="col variantes">
+            <h3>Temas más consultados</h3>
+            <ul id="temas-comunes">
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <a href="Ansiedad.html">Ansiedad y ataques de pánico</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <a href="#" target="_blank">Depresión y tristeza</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <a href="#" target="_blank">Baja autoestima</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <a href="#" target="_blank">Estrés académico</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <a href="#" target="_blank">Problemas de pareja</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <a href="#" target="_blank">Trastornos alimenticios</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <a href="#" target="_blank">Duelo y pérdida</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="motivacion">
+      <div>
+        <h1>🌈 ¿Cómo te sientes hoy?</h1>
+        <h2>
+          A veces no es fácil poner en palabras lo que nos pasa, y está bien.
+        </h2>
+        <p>
+          Aquí puedes encontrar información confiable, orientación y apoyo sobre
+          temas que realmente importan: ansiedad, estrés, autoestima,
+          relaciones, familia, sexualidad, identidad, y más.
+        </p>
+        <p class="dondeempezar">
+          🔍 ¿No sabes por dónde empezar? Explora nuestros temas más buscados o
+          cuéntanos cómo te sientes para ayudarte a encontrar lo que necesitas.
+        </p>
+      </div>
+      <!-- foto -->
+      <img src="./img/ilustración_principal.png" height="300px" />
+    </div>
+
+
+    <h2 id="temas" class="section-title">Explora nuestros temas</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="title">
+          <i class="fas fa-brain"></i>
+          <h2>Ansiedad</h2>
+        </div>
+        <div class="option">
+          <ul>
+            <li>Síntomas físicos y mentales</li>
+            <li>Técnicas de respiración</li>
+            <li>Terapias efectivas</li>
+            <li>Testimonios de recuperación</li>
+          </ul>
+        </div>
+        <a class="btn" href="subtemas_ansiedad.html">Leer más</a>
+      </div>
+
+      <div class="card">
+        <div class="title">
+          <i class="fas fa-heart-broken"></i>
+          <h2>Depresión</h2>
+        </div>
+        <div class="option">
+          <ul>
+            <li>Reconocer los síntomas</li>
+            <li>Cuándo buscar ayuda</li>
+            <li>Opciones de tratamiento</li>
+            <li>Apoyo para familiares</li>
+          </ul>
+        </div>
+        <a class="btn" href="subtemas_depresion.html">Leer más</a>
+      </div>
+
+      <div class="card">
+        <div class="title">
+          <i class="fas fa-user-shield"></i>
+          <h2>Autoestima</h2>
+        </div>
+        <div class="option">
+          <ul>
+            <li>Autoimagen positiva</li>
+            <li>Ejercicios prácticos</li>
+            <li>Combatir el autosabotaje</li>
+            <li>Aceptación personal</li>
+          </ul>
+        </div>
+        <a class="btn" href="subtemas_autoestima.html">Leer más</a>
+      </div>
+
+      <div class="card">
+        <div class="title">
+          <i class="fas fa-users"></i>
+          <h2>Relaciones</h2>
+        </div>
+        <div class="option">
+          <ul>
+            <li>Comunicación efectiva</li>
+            <li>Establecer límites sanos</li>
+            <li>Relaciones tóxicas</li>
+            <li>Construir confianza</li>
+          </ul>
+        </div>
+        <a class="btn" href="subtemas_relaciones.html">Leer más</a>
+      </div>
+    </div>
+
+    <h2 class="section-title">Recursos para situaciones específicas</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="title">
+          <i class="fas fa-graduation-cap"></i>
+          <h2>Estudiantes</h2>
+        </div>
+        <div class="option">
+          <ul>
+            <li>Estrés académico</li>
+            <li>Presión social</li>
+            <li>Técnicas de estudio</li>
+            <li>Balance vida-estudio</li>
+          </ul>
+        </div>
+        <a class="btn" href="subtemas_estudiantes.html">Leer Más</a>
+      </div>
+
+      <div class="card">
+        <div class="title3">
+          <i class="fas fa-medkit"></i>
+          <h2>Abuso de sustancias</h2>
+        </div>
+        <div class="option">
+          <ul>
+            <li>Causas y Factores de Riesgo</li>
+            <li>Tipos de sustancias más comunes</li>
+            <li>Consecuencias</li>
+            <li>Prevención temprana</li>
+          </ul>
+        </div>
+        <a class="btn" href="subtemas_sustancias.html">Leer Más</a>
+      </div>
+
+      <div class="card">
+        <div class="title2">
+          <i class="fas fa-cutlery"></i>
+          <h2>Transtornos alimenticios</h2>
+        </div>
+        <div class="option">
+          <ul>
+            <li>Alimentación</li>
+            <li>El peso y la figura</li>
+            <li>Estereotipos</li>
+            <li>Crianza consciente</li>
+          </ul>
+        </div>
+        <a class="btn" href="subtemas_alimenticios.html">Leer Más</a>
+      </div>
+
+      <div class="card">
+        <div class="title">
+          <i class="fas fa-hand-holding-heart"></i>
+          <h2>Embarazo y ETS</h2>
+        </div>
+        <div class="option">
+          <ul>
+            <li>Información confiable</li>
+            <li>Prevención y cuidados</li>
+            <li>Recursos locales</li>
+            <li>Preguntas frecuentes</li>
+          </ul>
+        </div>
+        <a class="btn" href="subtemas_ets.html">Leer Más</a>
+      </div>
+    </div>
+
+    <!-- Líneas de ayuda -->    
+    <section class="lineas-ayuda" id="lineas-ayuda">
+      <h2 class="section-title">Líneas de ayuda 24/7</h2>
+      <div class="ayuda-container">
+        <div class="linea-ayuda">
+            <i class="fas fa-phone-alt"></i>
+            <h3>Línea Nacional de Prevención del Suicidio</h3>
+            <p class="telefono">911</p>
+            <p>Atención gratuita, confidencial y disponible 24/7</p>
+        </div>
+
+        <div class="linea-ayuda">
+          <i class="fas fa-comments"></i>
+          <h3>Chat de Crisis</h3>
+          <p>Envía "AYUDA" al 741741</p>
+          <p>Consejeros capacitados disponibles por mensaje de texto</p>
+        </div>
+      </div>
+      <div class="demas">
+        <div class="contenedor">
+          <a href="CAPS.html">
+            <img src="./img/iluscaps.PNG" height="200px" />
+            <h3>36 CAPS en todo el distrito</h3>
+          </a>
+        </div>
+        <div class="contenedor">
+          <a href="telefonos.html">
+            <img src="./img/ilusllamada.PNG" height="200px" />
+            <h3>Telefonos utiles</h3>
+          </a>
+        </div>
+        <div class="contenedor">
+          <a href="https://berazategui.gob.ar/farmacias/" target="_blank">
+            <img src="./img/ilusfarmacia.PNG" height="200px" />
+            <h3>Farmacias de turno</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contacto">
+      <h2 class="section-title">
+        Registrate para recibir informacion y noticias
+      </h2>
+      <div class="contacto-container">
+        <div class="formulario-contacto">
+          <form>
+            <div class="form-grupo">
+              <label for="nombre">Nombre</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Tu nombre"
+              />
+            </div>
+            <div class="form-grupo">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Tu correo electrónico"
+              />
+            </div>
+            <button type="submit" class="btn-contacto">Enviar</button>
+          </form>
+        </div>
+
+        <div class="info-contacto">
+          <h3>Información adicional</h3>
+          <div class="disclaimer">
+            <p>
+              <strong>Importante:</strong> Este sitio proporciona información y
+              recursos educativos sobre salud mental. No reemplaza la consulta
+              con profesionales de la salud. Si estás en crisis, busca ayuda
+              inmediata.
+            </p>
+          </div>
+          <div class="disclaimer">
+            <p>
+              <strong>¿Cuales serán los beneficios?</strong> La posibilidad de
+              tener comentarios en los temas y subtemas proporcionados, poder
+              compartir la experiencia propia, ayudar y preguntar a personas que
+              pasaron lo mismo. Brindar ideas para nuevos temas, sugerir cambios
+              o recomendaciones.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <i class="fas fa-brain"></i>
+          <h3>BienestarAdolescente</h3>
+          <p>Apoyo para tu salud emocional</p>
+        </div>
+        <div class="footer-links">
+          <h4>Enlaces rápidos</h4>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#temas" target="_blank">Temas</a></li>
+            <li><a href="#ayuda" target="_blank">Emergencias</a></li>
+            <li><a href="#contacto" target="_blank">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-resources">
+          <h4>Recursos</h4>
+          <ul>
+            <li><a href="#" target="_blank">Directorio de profesionales</a></li>
+            <li><a href="#" target="_blank">Libros recomendados</a></li>
+            <li><a href="#" target="_blank">Apps de bienestar</a></li>
+            <li><a href="#" target="_blank">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="http://tecnica5berazategui.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-globe"></i></a>
+                </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 BienestarAdolescente - Todos los derechos reservados</p>
+        <p>
+          <a href="#">Política de privacidad</a> |
+          <a href="#">Términos de uso</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navToggle = document.getElementById("nav-toggle");
+        const mainNav = document.querySelector("header nav"); // Asumo que el nav no tiene un ID específico, lo busco por etiqueta
+
+        // Asignar un ID al nav si no lo tiene: <nav id="main-nav">...</nav>
+        // Si el NAV ya está en el HTML, no es necesario cambiarlo, pero es una buena práctica.
+
+        // Función para alternar el menú
+        function toggleNav() {
+          mainNav.classList.toggle("open");
+          // Alternar el ícono de Font Awesome
+          if (mainNav.classList.contains("open")) {
+            navToggle.querySelector("i").className = "fas fa-times"; // Ícono de cerrar
+          } else {
+            navToggle.querySelector("i").className = "fas fa-bars"; // Ícono de hamburguesa
+          }
+        }
+
+        // Evento al hacer clic en el botón
+        navToggle.addEventListener("click", toggleNav);
+
+        // Cerrar el menú al hacer clic en un enlace
+        const navLinks = mainNav.querySelectorAll("a");
+        navLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            if (mainNav.classList.contains("open")) {
+              toggleNav(); // Cierra el menú
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

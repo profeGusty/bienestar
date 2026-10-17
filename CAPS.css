@@ -1,0 +1,634 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    /* Paleta de colores principal */
+    --color-primary: #c7fdff;
+    --color-secondary: #de9ae0;
+    --color-highlight: #5be6bc;
+    --color-accent: #a0c4ff;
+    
+    /* Colores neutros */
+    --color-white: #ffffff;
+    --color-light: #f5f5f5;
+    --color-gray: #696969;
+    --color-dark: #1f2131;
+
+    /* VARIABLES AÑADIDAS PARA EVITAR ERRORES EN EL CÓDIGO EXISTENTE */
+    --color-tertiary: transparent; 
+    --color-sombra: rgba(0, 0, 0, 0.1); 
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-dark);
+    background-color: var(--color-primary);
+}
+
+/* Encabezado */
+header {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    flex-wrap: wrap;
+    /* Añadido para posicionar el menú desplegable */
+    position: relative; 
+    /* Asegura que el header esté encima de todo y tenga fondo en mobile */
+    z-index: 1000;
+    background-color: var(--color-primary);
+}
+
+.titulo{
+    background-color: #28a745;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.introduccion{
+       text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #000000; /* Ajustado para que se vea en el fondo morado */
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.container-logo {
+    display: flex;
+    align-items: center;
+}
+
+.container-logo i {
+    color: var(--color-secondary);
+    font-size: 40px;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.container-logo h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Navegación (Desktop) */
+nav {
+    /* Agregado para la transición y posición en mobile */
+    transition: all 0.3s ease;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center; 
+    margin-right: 130px;
+}
+
+nav ul li {
+    margin: 5px 10px;
+}
+
+nav ul li a {
+    color: var(--color-dark);
+    font-weight: 600;
+    text-decoration: none;
+    background-color: var(--color-tertiary);
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    color: var(--color-white);
+    background-color: var(--color-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón Hamburguesa (Oculto en Desktop) */
+.nav-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: var(--color-dark);
+    border: none;
+    background: transparent;
+    z-index: 100;
+    padding: 5px;
+}
+
+.maps{
+    margin-top: 10%;
+    margin-bottom: 7%;
+    display:flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.info-contacto {
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-bottom: 5%;
+    width: 65%;
+    height: 20%;
+    display: flex;
+    justify-content:center;
+    text-align: left;
+}
+
+.info-contacto h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: var(--color-dark);
+}
+
+.info-contacto p {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 15px 0;
+    color: var(--color-dark);
+}
+
+.info-contacto i {
+    margin-right: 10px;
+    color: var(--color-highlight);
+}
+
+.disclaimer {
+    margin-right: 15%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    margin-top: 30px;
+    border-left: 4px solid var(--color-highlight);
+}
+
+.btn-ver-mas {
+    margin-left: 5%;
+    display: inline-block;
+    background: var(--color-dark);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: transform 0.2s;
+}
+
+.btn-ver-mas:hover {
+    transform: scale(1.05);
+    background: var(--color-secondary);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.busqueda {
+    background: var(--color-white);
+    padding: 10px 15px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    /* Se usa rgba(0, 0, 0, 0.1) porque --color-sombra no existía */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+}
+
+.busqueda i {
+    margin-right: 10px;
+    color: var(--color-gray);
+}
+
+.busqueda input {
+    border: none;
+    outline: none;
+    width: 180px;
+    font-size: 14px;
+}
+
+/* ⬅️ ZONA DE LA CUADRÍCULA DE CAPS */
+.caps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* ⬅️ ESCRITORIO: 4 COLUMNAS */
+    gap: 40px; 
+    padding: 20px;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+/* --- Estilo de Tarjeta (<details>) --- */
+.caps-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff00;
+    transition: box-shadow 0.3s ease;
+    /* CLAVE: Posición relativa para anclar el contenido superpuesto */
+    position: relative; 
+    min-height: 200px; 
+}
+
+.caps-card:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Estilo del Encabezado (<summary>) --- */
+.caps-summary {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    padding: 0;
+    list-style: none; 
+    position: relative; 
+    min-height: 200px; 
+    height: 100%; 
+}
+
+/* Oculta el marcador nativo del details */
+.caps-summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Estilo del marcador desplegable */
+.caps-summary::after {
+    content: "▼";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 10px;
+    color: #007bff;
+    transition: opacity 0.4s;
+}
+
+/* Oculta y gira el marcador cuando está abierto */
+.caps-card.is-open .caps-summary::after {
+    transform: rotate(180deg);
+    opacity: 0; 
+}
+
+
+/* --- Estilo de Imagen y Título --- */
+
+.summary-image {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+    display: block;
+    border-bottom: 1px solid #eee;
+    transition: opacity 0.4s ease; 
+}
+
+.summary-title {
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    display: block;
+    width: 100%;
+    color: white; 
+    text-shadow: 2px 2px 4px #000000;
+    background-color: #38070700;
+    min-height: 40px; 
+    box-sizing: border-box;
+    transition: opacity 0.4s ease; 
+}
+
+/* DESVANECE imagen y título cuando la tarjeta tiene la clase 'is-open' */
+.caps-card.is-open .summary-image,
+.caps-card.is-open .summary-title {
+    opacity: 0; 
+}
+
+.caps-card .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    
+    padding: 15px;
+    line-height: 1.6;
+    font-size: 0.9em;
+    color: #333; 
+    background-color: #ffffff; 
+    box-sizing: border-box;
+    
+    /* ESTADO INICIAL (OCULTO): Fuera de la vista, listo para subir */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%); 
+    
+    /* DEFINICIÓN DE LA ANIMACIÓN (400 milisegundos) */
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+    
+    z-index: 10; 
+    overflow-y: auto;
+    border-top: none;
+}
+
+
+.caps-card.is-open .content { 
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); 
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    padding: 60px 20px 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    width: 20%;
+    min-width: 200px;
+    margin-bottom: 30px;
+}
+
+.footer-logo i {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: var(--color-primary);
+}
+
+.footer-logo h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    color: #aaa;
+}
+
+.footer-links,
+.footer-resources,
+.footer-social {
+    width: 20%;
+    min-width: 200px;
+    margin-bottom: 30px;
+}
+
+.footer-links h4,
+.footer-resources h4,
+.footer-social h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer-links h4:after,
+.footer-resources h4:after,
+.footer-social h4:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--color-highlight);
+}
+
+.footer-links ul,
+.footer-resources ul {
+    list-style: none;
+}
+
+.footer-links ul li,
+.footer-resources ul li {
+    margin: 12px 0;
+}
+
+.footer-links ul li a,
+.footer-resources ul li a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.footer-links ul li a:hover,
+.footer-resources ul li a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--color-white);
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    background-color: var(--color-accent);
+    transform: translateY(-5px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin-top: 40px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-bottom p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.footer-bottom a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------------------------------- */
+/* --- MEDIA QUERIES PARA RESPONSIVE Y MENÚ --- */
+/* ------------------------------------------- */
+
+/* 1. Tabletas y Móviles grandes (Max 992px) */
+@media (max-width: 992px) {
+    
+    /* HEADER & NAVIGATION */
+    
+    /* Mostrar el botón de hamburguesa */
+    .nav-toggle {
+        display: block; 
+        margin-left: auto; /* Empuja a la derecha */
+    }
+
+    /* Estilos de la navegación desplegable */
+    nav {
+        /* Se posiciona relativo al HEADER */
+        position: absolute; 
+        top: 100%; /* Inicia justo debajo del header */
+        left: 0;
+        width: 100%;
+        background: var(--color-white);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        visibility: hidden; 
+        transform: translateX(-100%); /* Ocultar a la izquierda */
+        z-index: 99;
+        transition: transform 0.4s ease-in-out, visibility 0.4s ease-in-out;
+        border-top: 1px solid var(--color-light);
+    }
+
+    /* Clase que se activa con JavaScript */
+    nav.open {
+        visibility: visible;
+        transform: translateX(0); /* Deslizar a la vista */
+    }
+    
+    nav ul {
+        flex-direction: column; /* Apilar los links verticalmente */
+        margin-right: 0;
+        padding: 20px 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 12px 20px;
+        width: 90%;
+        margin: 5px auto;
+        border-radius: 8px;
+    }
+
+    /* MAIN CONTENT: CAPS GRID */
+    .caps-grid {
+        grid-template-columns: repeat(2, 1fr); /* ⬅️ TABLETAS: 2 COLUMNAS (MODIFICAR ESTA LÍNEA SI SE QUIERE OTRO VALOR) */
+        gap: 30px;
+        padding: 20px;
+    }
+    
+    /* INFO CONTACTO */
+    .info-contacto {
+        margin: 5% auto;
+        width: 90%;
+        display: block;
+        text-align: center;
+    }
+    
+    .disclaimer {
+        margin-right: auto;
+        margin-left: auto;
+        padding: 20px;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        justify-content: space-around;
+    }
+    
+    .footer-logo, .footer-links, .footer-resources, .footer-social {
+        width: 45%; 
+        min-width: auto;
+        margin-bottom: 30px;
+    }
+}
+
+/* 2. Móviles pequeños (Max 576px) */
+@media (max-width: 576px) {
+    /* HEADER */
+    header {
+        padding: 15px 20px;
+    }
+    
+    .container-logo h1 {
+        font-size: 20px;
+    }
+    
+    .container-logo i {
+        font-size: 30px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    /* MAIN CONTENT: CAPS GRID */
+    .caps-grid {
+        grid-template-columns: 1fr; /* ⬅️ MÓVILES: 1 COLUMNA (MODIFICAR ESTA LÍNEA SI SE QUIERE OTRO VALOR) */
+        padding: 15px;
+        gap: 20px;
+    }
+    
+    /* MAPS */
+    .maps {
+        margin-top: 15%;
+        margin-bottom: 10%;
+    }
+
+    /* INFO CONTACTO */
+    .info-contacto {
+        width: 100%;
+        padding: 0 15px;
+        margin: 5% 0;
+    }
+    
+    .Bera img{
+    width: 200px;
+    height: 100px;
+}
+.btn-ver-mas{
+
+}
+
+    /* FOOTER: Una sola columna */
+    .footer-logo, .footer-links, .footer-resources, .footer-social {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmacias de Turno | BERA Joven</title>
+    <link rel="stylesheet" href="farmacias.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+            <div class="container-logo">
+                <i class="fas fa-brain"></i>
+                <h1>Bienestar Adolescente</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#temas">Temas</a></li>
+                    <li><a href="index.html#lineas-ayuda">Emergencias</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <button class="nav-toggle" id="nav-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    </header>
+
+    <div class="titulo" style="background: linear-gradient(135deg, #e72fff 0%, #6d0477 100%);">
+        <h1>Farmacias de turno Berazategui</h1>
+         <h3 class="introduccion">Encontrá las farmacias más cercanas para comprar medicamentos, productos de cuidado personal y obtener orientación profesional.</h3>
+    </div>
+
+    <main class="container">
+        
+        <section class="mapa-container">
+            <h2>Ubicación en el Mapa</h2>
+            <div id="mapa">
+                <div class="maps">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1anq2Gzzfy5bLANv9w9rPKEiHsMOrjuc&ehbc=2E312F&noprof=1" width="100%" height="500"></iframe></div>
+            </div>
+        </section>
+
+        <section class="listado-farmacias">
+
+            <div class="card farmacia" data-horario-apertura="00:00" data-horario-cierre="23:59">
+                <div class="card-header">
+                    <div class="nombre-estado">
+                        <h3>Farmacia Magadam</h3>
+                        <span class="estado" id="estado-Lopresti"></span>
+                    </div>
+                    <img src="magadam.jpg" alt="Foto Farmacia Lopresti" class="farmacia-foto">
+                </div>
+                
+                <div class="card-body">
+                    <div class="info-line">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p><strong>Dirección:</strong> Av. 14 4321, B1884CUE</p>
+                    </div>
+                    <div class="info-line">
+                        <i class="far fa-clock"></i>
+                        <p><strong>Horario de Turno:</strong> <span class="horario-texto">8:30 a 20:30</span></p>
+                    </div>
+                    <div class="info-line">
+                        <i class="fas fa-phone-alt"></i>
+                        <p><strong>Teléfono:</strong>011 4256-9518</p>
+                    </div>
+                    <a href="tel:48929361" class="boton-llamar"><i class="fas fa-phone"></i> Llamar</a>
+                </div>
+            </div>
+
+            <div class="card farmacia" data-horario-apertura="08:00" data-horario-cierre="22:00">
+                <div class="card-header">
+                    <div class="nombre-estado">
+                        <h3>Farmacia Lerana</h3>
+                        <span class="estado" id="estado-SolBegui"></span>
+                    </div>
+                    <img src="lerana.jpg" alt="Foto Farmacia Sol Begui" class="farmacia-foto">
+                </div>
+                <div class="card-body">
+                    <div class="info-line">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p><strong>Dirección:</strong> Av. 14 3999, B1884CUA</p>
+                    </div>
+                    <div class="info-line">
+                        <i class="far fa-clock"></i>
+                        <p><strong>Horario de Turno:</strong> <span class="horario-texto">08:00 a 21:00 hs.</span></p>
+                    </div>
+                    <div class="info-line">
+                        <i class="fas fa-phone-alt"></i>
+                        <p><strong>Teléfono:</strong>011 7116-1012</p>
+                    </div>
+                    <a href="tel:42167579" class="boton-llamar"><i class="fas fa-phone"></i> Llamar</a>
+                </div>
+            </div>
+
+            <div class="card farmacia" data-horario-apertura="09:00" data-horario-cierre="21:00">
+                <div class="card-header">
+                    <div class="nombre-estado">
+                        <h3>Farmacia Yacomella</h3>
+                        <span class="estado" id="estado-Traverso"></span>
+                    </div>
+                    <img src="yacomella.jpg" alt="Foto Farmacia Traverso" class="farmacia-foto">
+                </div>
+                <div class="card-body">
+                    <div class="info-line">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p><strong>Dirección:</strong>C. 24 4822, B1880 Berazategui</p>
+                    </div>
+                    <div class="info-line">
+                        <i class="far fa-clock"></i>
+                        <p><strong>Horario de Turno:</strong> <span class="horario-texto">9–13hs, 16:30–20hs</span></p>
+                    </div>
+                    <div class="info-line">
+                        <i class="fas fa-phone-alt"></i>
+                        <p><strong>Teléfono:</strong>011 4256-5641</p>
+                    </div>
+                    <a href="tel:73972328" class="boton-llamar"><i class="fas fa-phone"></i> Llamar</a>
+                </div>
+            </div>
+            </section>
+
+            <div class="info-contacto">
+                <div class="disclaimer">
+                    <p><strong>Importante:</strong> Recordá que la información sobre farmacias de turno puede variar. Siempre confirmá el horario por teléfono.</div>
+        <br>
+
+    </main>
+
+    <script>
+        function checkStatus() {
+            const now = new Date();
+            const currentHour = now.getHours();
+            const currentMinute = now.getMinutes();
+            const currentTimeInMinutes = (currentHour * 60) + currentMinute;
+
+            document.querySelectorAll('.farmacia').forEach(card => {
+                const aperturaString = card.getAttribute('data-horario-apertura');
+                const cierreString = card.getAttribute('data-horario-cierre');
+                const estadoElement = card.querySelector('.estado');
+                
+                const [aperturaHour, aperturaMinute] = aperturaString.split(':').map(Number);
+                const [cierreHour, cierreMinute] = cierreString.split(':').map(Number);
+                
+                const aperturaTimeInMinutes = (aperturaHour * 60) + aperturaMinute;
+                const cierreTimeInMinutes = (cierreHour * 60) + cierreMinute;
+
+                let statusText = 'CERRADO';
+                let statusClass = 'cerrado';
+
+                if (cierreTimeInMinutes < aperturaTimeInMinutes) {
+                    if (currentTimeInMinutes >= aperturaTimeInMinutes || currentTimeInMinutes < cierreTimeInMinutes) {
+                        statusText = 'ABIERTO';
+                        statusClass = 'abierto';
+                    }
+                } else {
+                    if (currentTimeInMinutes >= aperturaTimeInMinutes && currentTimeInMinutes <= cierreTimeInMinutes) {
+                        statusText = 'ABIERTO';
+                        statusClass = 'abierto';
+                    }
+                }
+
+                estadoElement.textContent = statusText;
+                estadoElement.className = 'estado ' + statusClass;
+            });
+        }
+
+        checkStatus();
+        setInterval(checkStatus, 60000); 
+    </script>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <i class="fas fa-brain"></i>
+                <h3>BienestarAdolescente</h3>
+                <p>Apoyo para tu salud emocional</p>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces rápidos</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#temas">Temas</a></li>
+                    <li><a href="#ayuda">Emergencias</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-resources">
+                <h4>Recursos</h4>
+                <ul>
+                    <li><a href="#">Directorio de profesionales</a></li>
+                    <li><a href="#">Libros recomendados</a></li>
+                    <li><a href="#">Apps de bienestar</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <!-- <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div> -->
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BienestarAdolescente - Todos los derechos reservados</p>
+            <p><a href="#">Política de privacidad</a> | <a href="#">Términos de uso</a></p>
+        </div>
+    </footer>
+
+        <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const navToggle = document.getElementById('nav-toggle');
+        const mainNav = document.querySelector('header nav'); // Asumo que el nav no tiene un ID específico, lo busco por etiqueta
+
+        // Asignar un ID al nav si no lo tiene: <nav id="main-nav">...</nav>
+        // Si el NAV ya está en el HTML, no es necesario cambiarlo, pero es una buena práctica.
+
+        // Función para alternar el menú
+        function toggleNav() {
+            mainNav.classList.toggle('open');
+            // Alternar el ícono de Font Awesome
+            if (mainNav.classList.contains('open')) {
+                navToggle.querySelector('i').className = 'fas fa-times'; // Ícono de cerrar
+            } else {
+                navToggle.querySelector('i').className = 'fas fa-bars'; // Ícono de hamburguesa
+            }
+        }
+
+        // Evento al hacer clic en el botón
+        navToggle.addEventListener('click', toggleNav);
+
+        // Cerrar el menú al hacer clic en un enlace
+        const navLinks = mainNav.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (mainNav.classList.contains('open')) {
+                    toggleNav(); // Cierra el menú
+                }
+            });
+        });
+    });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,652 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    /* Paleta de colores principal */
+    --color-primary: #c7fdff;
+    --color-secondary: #de9ae0;
+    --color-highlight: #5be6bc;
+    --color-accent: #a0c4ff;
+    
+    /* Colores neutros */
+    --color-white: #ffffff;
+    --color-light: #f5f5f5;
+    --color-gray: #696969;
+    --color-dark: #1f2131;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-dark);
+    background-color: var(--color-primary);
+}
+
+/* Encabezado */
+header {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    flex-wrap: wrap;
+    /* Añadido para posicionar el menú desplegable */
+    position: relative; 
+}
+
+.container-logo {
+    display: flex;
+    align-items: center;
+}
+
+.container-logo i {
+    color: var(--color-secondary);
+    font-size: 40px;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.container-logo h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Navegación (Desktop) */
+nav {
+    /* Agregado para la transición y posición en mobile */
+    transition: all 0.3s ease;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center; 
+    margin-right: 130px;
+}
+
+nav ul li {
+    margin: 5px 10px;
+}
+
+nav ul li a {
+    color: var(--color-dark);
+    font-weight: 600;
+    text-decoration: none;
+    /* Nota: --color-tertiary no está definido, pero se mantiene */
+    background-color: var(--color-tertiary);
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    color: var(--color-white);
+    background-color: var(--color-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón Hamburguesa (Oculto en Desktop) */
+.nav-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: var(--color-dark);
+    border: none;
+    background: transparent;
+    z-index: 100;
+    padding: 5px;
+}
+
+
+/* HERO SECTION */
+.heroprin {
+display: flex;
+align-items: center;
+justify-content: center;
+/* background: linear-gradient(135deg, #db66ea 0%, #ffd7ed 100%); */
+min-height: 60vh;
+padding: 2rem;
+flex-wrap: wrap;
+}
+
+.hero-content {
+flex: 1;
+max-width: 600px;
+padding: 2rem;
+color: #fff;
+}
+
+.hero-title {
+font-size: clamp(2.5rem, 5vw, 3.5rem);
+font-weight: 800;
+margin-bottom: 1.5rem;
+line-height: 1.1;
+text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.hero-subtitle {
+font-size: 1.1rem;
+color: #1f2131;
+background: rgba(255,255,255,0.3);
+padding: 20px;
+border-radius: 15px;
+backdrop-filter: blur(5px);
+}
+
+.foto {
+flex: 1;
+max-width: 500px;
+display: flex;
+justify-content: center;
+}
+
+.foto img {
+width: 100%;
+max-width: 600px;
+animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-25px); }
+}
+
+/* CUERPO Y NOTICIAS (Estilos Nuevos) */
+.cuerpo {
+font-family: 'Open Sans', sans-serif;
+background-color: #f0f2f5;
+min-height: 100vh;
+padding: 60px 20px;
+}
+
+.continente {
+max-width: 900px; /* Más ancho para que parezca feed de noticias */
+margin: 0 auto;
+}
+
+.cabeza {
+margin-bottom: 50px;
+border-bottom: 3px solid var(--color-secondary);
+padding-bottom: 15px;
+display: inline-block;
+width: 100%;
+}
+
+.cabeza h1 {
+font-size: 2rem;
+color: var(--color-dark);
+text-align: left;
+text-decoration: none;
+margin-top: 5%;
+}
+
+/* ESTILO NOTICIA (Details & Summary) */
+details {
+background: var(--color-white); /* Fondo blanco para las tarjetas */
+border-radius: 20px; /* Bordes más redondeados */
+margin-bottom: 40px;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Sombra suave */
+overflow: hidden;
+transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+border: 1px solid rgba(0,0,0,0.03);
+}
+
+details:hover {
+transform: translateY(-5px);
+box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+details[open] {
+box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* El encabezado de la "Noticia" */
+summary {
+padding: 0;
+cursor: pointer;
+list-style: none;
+display: flex;
+height: 200px; 
+position: relative;
+}
+
+summary::-webkit-details-marker {
+display: none;
+}
+
+/* La Imagen Grande a la Izquierda */
+.summary-image {
+width: 40%; 
+/* Aseguramos que la imagen ocupe el alto completo de la tarjeta */
+height: 100%; 
+object-fit: cover;
+border-radius: 0;
+transition: transform 0.5s ease;
+}
+
+details:hover .summary-image {
+filter: brightness(1.05);
+}
+
+/* Contenedor del Título dentro del summary */
+.summary-text-container {
+padding: 30px;
+display: flex;
+flex-direction: column;
+flex: 1; 
+/* CENTRAMOS EL CONTENIDO VERTICALMENTE */
+justify-content: center; 
+}
+
+.summary-title {
+font-size: 2rem;
+font-weight: 800;
+color: var(--color-dark); /* Color más oscuro para mejor contraste */
+line-height: 1.3;
+margin: 2%;
+margin-top: 4%;
+}
+
+/* Puedes dejar este estilo si en algún momento quieres agregar texto de preview */
+.summary-preview {
+font-size: 0.95rem;
+color: var(--color-gray); /* Usar el gris de la variable */
+font-weight: 400;
+margin-top: 10px; /* Espacio entre título y preview */
+}
+
+/* La Flecha a la Derecha */
+summary::after {
+content: '\f078';
+font-family: "Font Awesome 6 Free";
+font-weight: 900;
+font-size: 1.2rem;
+color: var(--color-gray); /* Cambiado a gris */
+position: absolute;
+right: 30px;
+top: 50%;
+transform: translateY(-50%);
+transition: transform 0.3s ease;
+background: var(--color-light); /* Fondo más discreto */
+width: 40px;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+}
+
+details[open] summary::after {
+transform: translateY(-50%) rotate(180deg);
+background: var(--color-secondary); /* Color secundario al abrir */
+color: white;
+}
+
+/* Contenido desplegable */
+.content {
+padding: 40px;
+line-height: 1.8;
+color: #555;
+background: #fff;
+border-top: 1px solid #eee;
+animation: fadeIn 0.5s ease;
+}
+
+.content h3 {
+color: var(--color-secondary);
+margin-top: 20px;
+margin-bottom: 10px;
+}
+
+.content ul {
+margin-left: 20px;
+margin-bottom: 20px;
+}
+
+.content li {
+margin-bottom: 10px;
+}
+
+.btn-ver-mas {
+display: inline-block;
+background: var(--color-dark);
+color: white;
+padding: 12px 30px;
+border-radius: 30px;
+text-decoration: none;
+font-weight: 600;
+margin-top: 20px;
+transition: transform 0.2s;
+}
+
+.btn-ver-mas:hover {
+transform: scale(1.05);
+background: var(--color-secondary);
+}
+
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(10px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+footer {
+background-color: var(--color-dark);
+color: var(--color-white);
+padding: 60px 20px 20px;
+}
+
+.footer-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.footer-logo {
+width: 20%;
+min-width: 200px;
+margin-bottom: 30px;
+}
+
+.footer-logo i {
+font-size: 30px;
+margin-bottom: 15px;
+color: var(--color-primary);
+}
+
+.footer-logo h3 {
+font-size: 22px;
+margin-bottom: 10px;
+}
+
+.footer-logo p {
+color: #aaa;
+}
+
+.footer-links,
+.footer-resources,
+.footer-social {
+width: 20%;
+min-width: 200px;
+margin-bottom: 30px;
+}
+
+.footer-links h4,
+.footer-resources h4,
+.footer-social h4 {
+font-size: 18px;
+margin-bottom: 20px;
+position: relative;
+}
+
+.footer-links h4:after,
+.footer-resources h4:after,
+.footer-social h4:after {
+content: '';
+position: absolute;
+bottom: -10px;
+left: 0;
+width: 40px;
+height: 3px;
+background-color: var(--color-highlight);
+}
+
+.footer-links ul,
+.footer-resources ul {
+list-style: none;
+}
+
+.footer-links ul li,
+.footer-resources ul li {
+margin: 12px 0;
+}
+
+.footer-links ul li a,
+.footer-resources ul li a {
+color: #aaa;
+text-decoration: none;
+transition: all 0.3s;
+}
+
+.footer-links ul li a:hover,
+.footer-resources ul li a:hover {
+color: var(--color-primary);
+text-decoration: underline;
+}
+
+.social-icons {
+display: flex;
+gap: 15px;
+margin-top: 20px;
+}
+
+.social-icons a {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 40px;
+height: 40px;
+background-color: rgba(255, 255, 255, 0.1);
+border-radius: 50%;
+color: var(--color-white);
+transition: all 0.3s;
+text-decoration: none;
+}
+
+.social-icons a:hover {
+background-color: var(--color-accent);
+transform: translateY(-5px);
+}
+
+.footer-bottom {
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+padding-top: 20px;
+ margin-top: 40px;
+ text-align: center;
+ max-width: 1200px;
+ margin: 0 auto;
+}
+
+.footer-bottom p {
+ color: #aaa;
+ font-size: 14px;
+}
+
+.footer-bottom a {
+ color: var(--color-primary);
+ text-decoration: none;
+}
+
+.footer-bottom a:hover {
+text-decoration: underline;
+}
+
+/* ------------------------------------------- */
+/* --- MEDIA QUERIES PARA RESPONSIVE Y MENÚ --- */
+/* ------------------------------------------- */
+
+/* 1. Tabletas y Móviles grandes (Max 992px) */
+@media (max-width: 992px) {
+    /* HEADER y NAVEGACIÓN */
+    header {
+        padding: 10px 20px; /* Reducir padding vertical */
+    }
+
+     .nav-toggle {
+        display: block;
+        margin-left: auto; /* Empuja el botón a la derecha */
+    }
+
+
+    nav {
+        /* Estilos para el menú desplegable en móvil */
+        position: absolute;
+        top: 80px; /* Debajo del header (ajustar si la altura del header cambia) */
+        left: 0;
+        width: 100%;
+        background: var(--color-white);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        visibility: hidden; /* Oculto por defecto */
+        transform: translateX(-100%); /* Desplazado fuera de la vista */
+        z-index: 99;
+        border-top: 1px solid var(--color-light);
+    }
+
+    /* Clase que se activa con JavaScript */
+    nav.open {
+        visibility: visible;
+        transform: translateX(0); /* Deslizar a la vista */
+    }
+    
+    nav ul {
+        flex-direction: column; /* Apilar los links verticalmente */
+        margin-right: 0;
+        padding: 20px 0;
+    }
+
+    nav ul li {
+        text-align: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 12px 20px;
+        width: 90%;
+        margin: 5px auto;
+        border-radius: 8px;
+    }
+
+    nav ul li a:hover {
+        background-color: var(--color-light);
+    }
+
+    /* HERO SECTION */
+    .heroprin {
+        flex-direction: column;
+        text-align: center;
+        min-height: auto;
+        padding: 40px 20px;
+    }
+    
+    .hero-content, .foto {
+        max-width: 100%;
+        padding: 1rem 0;
+    }
+
+    .hero-content {
+        order: 1; /* Poner el texto debajo de la imagen */
+    }
+
+    .foto {
+        order: -1; /* Mover la imagen arriba */
+        margin-bottom: 30px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    /* NOTICIAS (Details/Summary) */
+    summary {
+        flex-direction: column; /* Apilar imagen y texto */
+        height: auto;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .summary-image {
+        width: 100%;
+        height: 150px; 
+        margin-bottom: 15px;
+    }
+
+    .summary-text-container {
+        padding: 0;
+    }
+    
+    .summary-title {
+        font-size: 1.5rem;
+        margin: 0 0 5px 0;
+    }
+    
+    /* Reubicación de la flecha */
+    summary::after {
+        position: static;
+        transform: none;
+        margin-top: 15px;
+        align-self: flex-end; /* La alinea a la derecha en el flujo de la columna */
+    }
+    
+    details[open] summary::after {
+        transform: rotate(180deg);
+    }
+    
+    /* FOOTER */
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-logo, .footer-links, .footer-resources, .footer-social {
+        width: 100%;
+        min-width: auto;
+        margin-bottom: 25px;
+    }
+}
+
+/* 2. Móviles pequeños (Max 576px) */
+@media (max-width: 576px) {
+    body {
+        font-size: 15px;
+    }
+    
+    /* Header */
+    .container-logo h1 {
+        font-size: 18px;
+    }
+    
+    /* Hero */
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        padding: 15px;
+    }
+    
+    /* Noticias */
+    .continente {
+        padding: 0 10px;
+    }
+
+    .summary-title {
+        font-size: 1.2rem;
+    }
+
+    .content {
+        padding: 20px;
+    }
+    
+    .btn-ver-mas {
+        padding: 10px 20px;
+    }
+}
